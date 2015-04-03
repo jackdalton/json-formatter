@@ -1,0 +1,14 @@
+{
+  "name" : "JSON Formatter",
+  "description" : "A Chrome app made for formatting JSON.",
+  "version" : "0.0.2",
+  "manifest_version" : 2,
+  "app" : {
+    "background" : {
+      "scripts" : ["background.js"]
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
