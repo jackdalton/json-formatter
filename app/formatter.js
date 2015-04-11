@@ -28,6 +28,6 @@ function notifyCompletion(status) {
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
             $("#errorOut").fadeTo("slow", 0);
-        }, 4500);
+        }, 10000);
     }
 }
