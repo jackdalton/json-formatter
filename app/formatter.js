@@ -17,13 +17,13 @@ function selectAll() {
 }
 function notifyCompletion(status) {
     if (status == "done") {
-        document.getElementById("notification-area").innerHTML = "JSON formatted!";
+        document.getElementById("notification-area").innerHTML = "JSON formatted! <b>Your JSON is perfectly valid.</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
         }, 4500);
     } else if (status == "failed") {
-        document.getElementById("notification-area").innerHTML = "Something went wrong, see below for details.";
+        document.getElementById("notification-area").innerHTML = "Something went wrong, see below for details. <b>Your JSON is invalid.</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
