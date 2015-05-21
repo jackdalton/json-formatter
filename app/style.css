@@ -1,0 +1,11 @@
+body {
+    background-color: #101010;
+}
+span {
+    font-weight: bold;
+    color: ghostwhite;
+}
+input, textarea, button {
+    background-color: #151515;
+    color: ghostwhite;
+}
