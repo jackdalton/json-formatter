@@ -3,19 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <style>
-        #notification-area {
-            color: blue;
+        body {
+            background-color: #101010;
+        }
+        span {
             font-weight: bold;
+            color: ghostwhite;
+        }
+        input, textarea, button {
+            background-color: #151515;
+            color: ghostwhite;
         }
     </style>
     <title>JSON Formatter</title>
 </head>
 <body>
-    <span id="notification-area"></span><br>
-    <textarea id="json-input" rows="10" cols="40" spellcheck="false" placeholder="Paste your JSON here."></textarea>
-    <button type="button" id="formatButton">Format JSON</button><button type="button" id="selectAllButton">Select all</button><br><br>
-    <span id="errorOut"></span>
-    <br><br>
+    <center>
+        <span id="notification-area"></span><br>
+        <textarea id="json-input" rows="10" cols="40" spellcheck="false" placeholder="Paste your JSON here."></textarea><br><br>
+        <button type="button" id="formatButton">Format JSON</button><button type="button" id="selectAllButton">Select all</button><br><br>
+        <span id="errorOut"></span>
+        <br><br>
+    </center>
     <script src="jquery.min.js"></script>
     <script src="formatter.js"></script>
 </body>
