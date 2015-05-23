@@ -9,3 +9,6 @@ input, textarea, button {
     background-color: #151515;
     color: ghostwhite;
 }
+button {
+    cursor: pointer;
+}
