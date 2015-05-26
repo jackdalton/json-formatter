@@ -1,4 +1,3 @@
 #To Do
 
-* Make it look better.
-* Improve layout.
+* Nothing, for now.
