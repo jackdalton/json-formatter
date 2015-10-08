@@ -9,6 +9,10 @@ input,
 textarea {
     background-color: #151515;
     color: ghostwhite;
+	border: 1px solid #fa5c5c;
+}
+textarea:focus {
+	outline: none;
 }
 button {
     cursor: pointer;
