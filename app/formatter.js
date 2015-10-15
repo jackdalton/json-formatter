@@ -6,22 +6,22 @@ function format() {
         input = JSON.parse(input);
         input = JSON.stringify(input, null, 4);
         document.getElementById("json-input").value = input;
-        notifyCompletion("done");
+        notifyCompletion(true);
     } catch (error) {
-        notifyCompletion("failed", error);
+        notifyCompletion(false, error);
     }
 }
 function selectAll() {
     document.getElementById("json-input").select();
 }
 function notifyCompletion(status, err) {
-    if (status == "done") {
+    if (status) {
         document.getElementById("notification-area").innerHTML = "JSON formatted! <b>Your JSON is perfectly valid.</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
         }, 4500);
-    } else if (status == "failed") {
+    } else if (!status) {
         document.getElementById("notification-area").innerHTML = "<b>" + err + "</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
