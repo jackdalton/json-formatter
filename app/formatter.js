@@ -8,14 +8,13 @@ function format() {
         document.getElementById("json-input").value = input;
         notifyCompletion("done");
     } catch (error) {
-        notifyCompletion("failed");
-        document.getElementById("errorOut").innerHTML = error;
+        notifyCompletion("failed", error);
     }
 }
 function selectAll() {
     document.getElementById("json-input").select();
 }
-function notifyCompletion(status) {
+function notifyCompletion(status, err) {
     if (status == "done") {
         document.getElementById("notification-area").innerHTML = "JSON formatted! <b>Your JSON is perfectly valid.</b>";
         $("#notification-area").fadeTo("fast", 1);
@@ -23,7 +22,7 @@ function notifyCompletion(status) {
             $("#notification-area").fadeTo("slow", 0);
         }, 4500);
     } else if (status == "failed") {
-        document.getElementById("notification-area").innerHTML = "Something went wrong, see below for details. <b>Your JSON is invalid.</b>";
+        document.getElementById("notification-area").innerHTML = "<b>" + err + "</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
