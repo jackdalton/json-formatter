@@ -6,23 +6,27 @@ function format() {
         input = JSON.parse(input);
         input = JSON.stringify(input, null, 4);
         document.getElementById("json-input").value = input;
-        notifyCompletion(true);
+        notify(true);
     } catch (error) {
-        notifyCompletion(false, error);
+        notify(false, error);
     }
 }
 function selectAll() {
     document.getElementById("json-input").select();
+	document.execCommand("Copy");
+	notify("msg", "Copied!");
 }
-function notifyCompletion(status, err) {
-    if (status) {
-        document.getElementById("notification-area").innerHTML = "JSON formatted! <b>Your JSON is perfectly valid.</b>";
+function notify(status, msg) {
+    if (status == "msg") {
+		document.getElementById("notification-area").innerHTML = msg;
+	} else if (status) {
+        document.getElementById("notification-area").innerHTML = "JSON formatted and validated!";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
         }, 4500);
     } else if (!status) {
-        document.getElementById("notification-area").innerHTML = "<b>" + err + "</b>";
+        document.getElementById("notification-area").innerHTML = "<b>" + msg + "</b>";
         $("#notification-area").fadeTo("fast", 1);
         setTimeout(function () {
             $("#notification-area").fadeTo("slow", 0);
