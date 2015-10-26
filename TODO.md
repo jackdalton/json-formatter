@@ -1,3 +1,4 @@
 #To Do
 
-* UI overhaul
+- [x] UI overhaul
+- [ ] Add options
