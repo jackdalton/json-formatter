@@ -1,6 +1,26 @@
 (function() {
     document.getElementById("formatButton").addEventListener("click", format, false);
     document.getElementById("selectAllButton").addEventListener("click", selectAll, false);
+    document.getElementById("sidebar-title").addEventListener("click", toggleSidebar, false);
+    document.getElementById("gh-link").addEventListener("click", function() {
+        window.open("https://github.com/jackdalton/json-formatter");
+    }, false);
+    document.getElementById("author-link").addEventListener("click", function() {
+        window.open("https://github.com/jackdalton");
+    }, false);
+    var sidebar_hidden = true;
+    function toggleSidebar() {
+        sidebar_hidden = !sidebar_hidden;
+        if (sidebar_hidden) {
+            $("#sidebar").animate({
+                left: "-150px"
+            }, 250);
+        } else {
+            $("#sidebar").animate({
+                left: 0
+            }, 250);
+        }
+    }
     function format() {
         var input = document.getElementById("json-input").value;
         try {
