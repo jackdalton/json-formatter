@@ -19,7 +19,11 @@
     }
     function notify(status, msg) {
         if (status == "msg") {
+            $("#notification-area").fadeTo("fast", 1);
     		document.getElementById("notification-area").innerHTML = msg;
+    		setTimeout(function () {
+                $("#notification-area").fadeTo("slow", 0);
+            }, 4500);
     	} else if (status) {
             document.getElementById("notification-area").innerHTML = "JSON formatted and validated!";
             $("#notification-area").fadeTo("fast", 1);
