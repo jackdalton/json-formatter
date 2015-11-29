@@ -1,7 +1,7 @@
 {
   "name" : "JSON Formatter",
   "description" : "A Chrome app for formatting JSON.",
-  "version" : "0.1.8",
+  "version" : "0.1.9",
   "manifest_version" : 2,
   "offline_enabled": true,
   "app" : {
