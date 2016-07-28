@@ -6,7 +6,7 @@
         window.open("https://github.com/jackdalton/json-formatter");
     }, false);
     document.getElementById("author-link").addEventListener("click", function() {
-        window.open("https://github.com/jackdalton");
+        window.open("http://jackdalton.org");
     }, false);
     var tabWidth;
     $(document).ready(function() {
